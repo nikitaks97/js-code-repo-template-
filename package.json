@@ -1,6 +1,7 @@
 {
   "name": "javascript-action",
   "description": "GitHub Actions JavaScript Template",
+  "main": "dist/index.js",
   "version": "0.0.0",
   "author": "",
   "type": "module",
