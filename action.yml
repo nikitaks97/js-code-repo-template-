@@ -1,24 +1,39 @@
-name: The name of your action here
-description: Provide a description here
-author: Your name or organization here
+# Name of the GitHub Action as it will appear in the Actions marketplace or workflow UI
+name: "Open a Github Issue (Testing)"
 
-# Add your action's branding here. This will appear on the GitHub Marketplace.
-branding:
-  icon: heart
-  color: red
+# Author name (shown in GitHub marketplace or when inspecting the action)
+author: Ali Alaa
 
-# Define your inputs here.
+# Short description of what this Action does
+description: "Opens a github issue"
+
+# Define input parameters that the Action accepts
 inputs:
-  milliseconds:
-    description: Your input description here
+  token: # Input key that represents a GitHub token (used for authentication)
+    description: "Github Token"
+    required: true # This input must be provided for the Action to run
+
+  title: # Input for the issue's title
+    description: "Issue Title"
     required: true
-    default: '1000'
 
-# Define your outputs here.
+  body: # Optional input for the issue's body/description
+    description: "Issue Body"
+
+  assignees: # Optional input for assigning the issue to users (newline-separated list)
+    description: "Issue Assignees"
+
+# Define the outputs from this Action that can be used in later steps
 outputs:
-  time:
-    description: Your output description here
+  issue: # The output variable's name
+    description: "The issue object as a json string" # Describes what this output contains
 
+# Define how this Action should be executed
 runs:
-  using: node20
-  main: dist/index.js
+  using: "node16" # Tells GitHub to run the action using Node.js 16 runtime
+  main: "dist/index.js" # The entry point of the compiled action (usually compiled from TypeScript)
+
+# Optional branding metadata (used in GitHub Marketplace UI)
+branding:
+  icon: "alert-circle" # Icon shown in Marketplace (from Feather icons)
+  color: "yellow"      # Color theme for the action badge
