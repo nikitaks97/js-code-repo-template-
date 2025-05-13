@@ -23,7 +23,7 @@ jobs:
       - uses: ./
         id: issue
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.TOKEN }}
           title: Test Issue
           body: Test issue body
           assignees: |
