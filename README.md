@@ -11,7 +11,7 @@ body
 The body of the issue.
 
 assignees
-A list of GitHub usernames to assign to the issue.
+A list of GitHub usernames to assign to the issue
 
 Outputs
 issue
