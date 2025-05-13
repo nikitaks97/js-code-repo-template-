@@ -1,8 +1,8 @@
 # Name of the GitHub Action as it will appear in the Actions marketplace or workflow UI
-name: "Open a Github Issue (Testing)"
+name: "Open a Github Issue (nk)"
 
 # Author name (shown in GitHub marketplace or when inspecting the action)
-author: Ali Alaa
+author: nikitaks97
 
 # Short description of what this Action does
 description: "Opens a github issue"
